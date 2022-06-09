@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+*.xlsx
+*.txt
+*.zip
+*.geojson
+*.json
+INPUT_GEOJSON
+OUTPUT_GEOJSON
