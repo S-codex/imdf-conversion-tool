@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 import json
 from dataclasses import asdict
@@ -84,7 +85,7 @@ def convert_venue(inFilePath, outFilePath) :
     with out_path_obj.open(mode='w') as out_file:
         print("writing to Venue output file ...")
         out_file.write(venue_imdf_json)
-    print("Successfully wrote Venue to output file!")
+    print("Successfully wrote Venue to output file!\n"+"-"*50)
 
 
 def __main():
