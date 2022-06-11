@@ -3,6 +3,7 @@ from pathlib import Path
 from converters.building_converter import convert_building
 from converters.venue_converter import convert_venue
 from converters.address_converter import convert_address
+from converters.footprint_converter import convert_footprint
 
 def __main():
     args = sys.argv[1:]
@@ -25,6 +26,8 @@ def __main():
             convert_address(inFile, outFile)
         elif "building" in inFile.name.lower():
             convert_building(inFile, outFile)
+        elif "footprint" in inFile.name.lower():
+            convert_footprint(inFile, outFile)
 
 
 
