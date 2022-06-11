@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+from converters.building_converter import convert_building
 from converters.venue_converter import convert_venue
 from converters.address_converter import convert_address
 
@@ -22,6 +23,9 @@ def __main():
             convert_venue(inFile, outFile)
         elif "address" in inFile.name.lower():
             convert_address(inFile, outFile)
+        elif "building" in inFile.name.lower():
+            convert_building(inFile, outFile)
+
 
 
 if __name__ == "__main__":
