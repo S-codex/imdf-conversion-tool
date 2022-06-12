@@ -23,4 +23,4 @@
     _For other systems - Linux/MacOS, use the corresponding system path format for input and output directory paths_
 
 ## _Limitations / Considerations_
-- As per v1.0.0, the tool expects the input structure of **coordinates** in **venue** module to be exactly a triple-nested list of coordinate pairs.
+- As per v1.0.0, the tool expects the input structure of **coordinates** in **venue**, **footprint**, **level** module to be exactly a triple-nested list of coordinate pairs.
