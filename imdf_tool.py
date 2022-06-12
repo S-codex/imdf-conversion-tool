@@ -17,10 +17,10 @@ def __main():
 
     for inFile in Path(inDirectoryPath).glob('*.geojson'):
         outFileName = inFile.name.split('.')[0]+'_imdf'+'.geojson'
-        outFile = Path(outDirectoryPath,outFileName)
-        if inFile.match("venue*"):
+        outFile = Path(outDirectoryPath, outFileName)
+        if "venue" in inFile.name.lower():
             convert_venue(inFile, outFile)
-        elif inFile.match("address*"):
+        elif "address" in inFile.name.lower():
             convert_address(inFile, outFile)
 
 
