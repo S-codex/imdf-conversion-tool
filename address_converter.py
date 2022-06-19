@@ -17,7 +17,7 @@ def __map_address(address_dict: dict) -> dict:
 
             # create properties object if it exists in input
             properties = None
-            if 'properties' in feat:
+            if 'properties' in feat and feat.get('properties'):
                 properties = Properties()
                 properties.address = feat['properties'].get('address')
                 properties.unit = feat['properties'].get('unit')

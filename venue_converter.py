@@ -17,17 +17,20 @@ def __map_venue(venue_dict : dict) -> dict:
 
             # create geometry object if it exists in input
             geometry = None
-            if 'geometry' in feat :
+            if 'geometry' in feat and feat.get('geometry'):
                 geometry = Geometry()
                 if 'coordinates' in feat['geometry']:
-                    geometry.coordinates=[feat['geometry']['coordinates'][0][0]] # FIXME: ask for the correct structure of coords b/w two formats. list-convert them in a better way.
+                    coords = feat['geometry']['coordinates']
+                    if coords and type(coords) is list and type(coords[0]) is list:
+                        # FIXME: find the correct structure of coords b/w two formats. list-convert them in a better way.
+                        geometry.coordinates=[feat['geometry']['coordinates'][0][0]]
 
             if geometry:
                 feature.geometry = geometry
 
             # create properties object if it exists in input
             properties = None
-            if 'properties' in feat:
+            if 'properties' in feat and feat.get('properties'):
                 properties = Properties()
                 properties.category=feat['properties'].get('category')
                 properties.name=feat['properties'].get('name')
@@ -40,7 +43,7 @@ def __map_venue(venue_dict : dict) -> dict:
 
                 # create display_point object if it exists in input
                 display_point = None
-                if 'display_point' in feat['properties']:
+                if 'display_point' in feat['properties'] and feat.get('properties').get('display_point'):
                     display_point = DisplayPoint()
                     # display_point.type=feat['properties']['display_point'].get('type')
                     display_point.coordinates=feat['properties']['display_point'].get('coordinates')
