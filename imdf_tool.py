@@ -5,6 +5,8 @@ from converters.venue_converter import convert_venue
 from converters.address_converter import convert_address
 from converters.footprint_converter import convert_footprint
 from converters.level_converter import convert_level
+from converters.opening_converter import convert_opening
+
 
 def __main():
     args = sys.argv[1:]
@@ -31,7 +33,8 @@ def __main():
             convert_footprint(inFile, outFile)
         elif "level" in inFile.name.lower():
             convert_level(inFile, outFile)
-
+        elif "opening" in inFile.name.lower():
+            convert_opening(inFile, outFile)
 
 
 if __name__ == "__main__":
