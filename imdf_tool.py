@@ -6,6 +6,7 @@ from converters.address_converter import convert_address
 from converters.footprint_converter import convert_footprint
 from converters.level_converter import convert_level
 from converters.opening_converter import convert_opening
+from converters.relationship_converter import convert_relationship
 
 
 def __main():
@@ -35,6 +36,8 @@ def __main():
             convert_level(inFile, outFile)
         elif "opening" in inFile.name.lower():
             convert_opening(inFile, outFile)
+        elif "relationship" in inFile.name.lower():
+            convert_relationship(inFile, outFile)
 
 
 if __name__ == "__main__":
