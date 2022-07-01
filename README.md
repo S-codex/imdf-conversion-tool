@@ -22,5 +22,14 @@
     ```
     _For other systems - Linux/MacOS, use the corresponding system path format for input and output directory paths_
 
+#### Individual Module Usage Instructions (Windows)
+- To use an individual module to convert a single file, use the following command example along with the input and output **file** paths
+```
+python converters\abc_converter.py C:\User\Desktop\Input_Geojson\abc_Input.geojson C:\User\Desktop\Output_Geojson\abc_Output.geojson
+```
+
+_For other systems - Linux/MacOS, use the corresponding system path format for input and output directory paths_
+
+
 ## _Limitations / Considerations_
 - As per v1.0.0, the tool expects the input structure of **coordinates** in **venue**, **footprint**, **level**, **opening** module to be exactly a triple-nested list of coordinate pairs.
