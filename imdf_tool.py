@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
-from venue_converter import convert_venue
-from address_converter import convert_address
+from converters.venue_converter import convert_venue
+from converters.address_converter import convert_address
 
 def __main():
     args = sys.argv[1:]
@@ -13,7 +13,7 @@ def __main():
             f"Expected 2 arguments : Input Directory and Output Directory, got {len(args)}. Please try again with 2 arguments.")
         raise SystemExit
 
-    print("\nConversion started.")
+    print("\nConversion started.\n")
 
     for inFile in Path(inDirectoryPath).glob('*.geojson'):
         outFileName = inFile.name.split('.')[0]+'_imdf'+'.geojson'
