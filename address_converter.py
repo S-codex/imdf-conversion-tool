@@ -36,7 +36,7 @@ def __map_address(address_dict: dict) -> dict:
             if properties:
                 feature.properties = properties
 
-        features.append(feature)
+            features.append(feature)
 
     address = Address()
     address.type = address_dict.get('type')

@@ -57,7 +57,7 @@ def __map_venue(venue_dict : dict) -> dict:
             if properties:
                 feature.properties = properties
 
-        features.append(feature)
+            features.append(feature)
 
     venue = Venue()
     venue.type = venue_dict.get('type')
